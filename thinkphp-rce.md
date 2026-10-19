@@ -18,11 +18,16 @@ GET /index.php?s=index/\think\app/invokefunction&function=call_user_func_array&v
 ```
 ## Payload详解：
 thinkphp框架的结构为【模块/控制器/方法】用 '/' 正斜杠隔开
+
 eg：index.php?s=store/passport/login
+
 翻译成人话就是在store这个模块下找passport这个控制器执行login方法，
+
 index/：代表在index这个模块下没问题，本来按照thinkphp框架的结构后面应该跟的是【控制器/方法】这种形式，但是！在thinkphp5下【\think\app】是系统核心底层的隐藏目录，【\think\app】是框架内部最核心的一个类
 /invokefunction：可以简单理解为一个被定义的类，比如class student，invokefunction在这段代码中的作用等价于student，都是通过声明后来进行调用这个类
+
 源码长这样：public static function invokeFunction($function, $vars = [])
+
 ## 为什么框架会被骗？
 ThinkPHP 的底层代码在解析 URL 时，本来以为你要传个普通的办公室名字(就类似于passport)，结果一看你传了个带反斜杠的 \think\app。由于早期版本没有对反斜杠做严格的过滤，框架真的把你带到了底层的“总控制室”，并且让你按下了执行按钮。
 

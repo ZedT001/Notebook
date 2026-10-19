@@ -26,7 +26,8 @@ eg：index.php?s=store/passport/login
 index/：代表在index这个模块下没问题，本来按照thinkphp框架的结构后面应该跟的是【控制器/方法】这种形式，但是！在thinkphp5下【\think\app】是系统核心底层的隐藏目录，【\think\app】是框架内部最核心的一个类
 /invokefunction：可以简单理解为一个被定义的方法，但是由于写了static(静态)，所以可以在不通过new实例化的情况下调用
 
-源码长这样：```http public static function invokeFunction($function, $vars = [])```
+源码长这样：```http 
+public static function invokeFunction($function, $vars = [])```
 
 function=call_user_func_array：call：调用执行、user_func：用户定义的函数、array：数组
 

